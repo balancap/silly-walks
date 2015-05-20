@@ -10,6 +10,81 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <style type='text/css'>
+    .fixed {
+        position: fixed;
+    }
+
+    /* sidebar */
+    .bs-docs-sidebar {
+        padding-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* all links */
+    .bs-docs-sidebar .nav>li>a {
+        color: #999;
+        border-left: 2px solid transparent;
+        padding: 4px 20px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    /* nested links */
+    .bs-docs-sidebar .nav .nav>li>a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    /* active & hover links */
+    .bs-docs-sidebar .nav>.active>a,
+    .bs-docs-sidebar .nav>li>a:hover,
+    .bs-docs-sidebar .nav>li>a:focus {
+        color: #00478F;
+        text-decoration: none;
+        background-color: transparent;
+        border-left-color: #00478F;
+    }
+    /* all active links */
+    .bs-docs-sidebar .nav>.active>a,
+    .bs-docs-sidebar .nav>.active:hover>a,
+    .bs-docs-sidebar .nav>.active:focus>a {
+        font-weight: 700;
+    }
+    /* nested active links */
+    .bs-docs-sidebar .nav .nav>.active>a,
+    .bs-docs-sidebar .nav .nav>.active:hover>a,
+    .bs-docs-sidebar .nav .nav>.active:focus>a {
+        font-weight: 500;
+    }
+
+    /* hide inactive nested list */
+    .bs-docs-sidebar .nav ul.nav {
+        display: none;
+    }
+    /* show active nested list */
+    .bs-docs-sidebar .nav>.active>ul.nav {
+        display: block;
+    }
+    </style>
+
+    <script type='text/javascript'>//<![CDATA[
+    $(window).load(function(){
+    $('body').scrollspy({
+        target: '#sidebar'
+    });
+    });//]]>
+    </script>
+
+<!--     <script>
+    $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40});
+    </script> -->
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,80 +126,113 @@
       </div>
     </nav>
 
+
     <div class="container">
+
       <div class="row">
-        <div class="col-xs-12 col-sm-12">
-          <h2>Paul Balança's research &amp; cie</h2>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <img src="img/pic-reduce.jpg" alt="Morning is evil!" class="img-thumbnail">
-        </div>
-        <div class="col-xs-12 col-sm-1">
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h4>Address &amp; contact:</h4>
-          <p>Paul Balança <br>
-          Post-doc <br>
-          Faculty of Industrial Engineering and Management <br>
-          Technion - Israël Institute of Technology<br>
-          32000 Haifa <br>
-          Israël
+
+        <div class="col-md-10">
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <h2>Paul Balança's research &amp; cie</h2>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <img src="img/pic-reduce.jpg" alt="Morning is evil!" class="img-thumbnail">
+            </div>
+            <div class="col-xs-12 col-sm-1">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h4>Address &amp; contact:</h4>
+              <p>Paul Balança <br>
+              Post-doc <br>
+              Faculty of Industrial Engineering and Management <br>
+              Technion - Israël Institute of Technology<br>
+              32000 Haifa <br>
+              Israël
+              </p>
+              <p>
+                <strong>E-mail: </strong><a href="mailto:paul.balanca@gmail.com">paul.balanca@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <h3 id="who">Who I am?</h3>
+          <p align="justify">
+          I am a post-doc working in collaboration with professor <a href="http://iew3.technion.ac.il/Home/Users/leonid.phtml" target="_blank">Leonid Mytnik</a> at the Israel Institute of Technology - Technion. My present work work mainly investigates the fractal geometry of continuous random trees and measure-valued processes such as stable super-Brownian motion. I am happily working on these subjects thanks to a joined fellowship of the Technion and the French Embassy in Israël.
           </p>
-          <p>
-            <strong>E-mail: </strong><a href="mailto:paul.balanca@gmail.com">paul.balanca@gmail.com</a>
+          <p align="justify">
+          From 2010 to 2013, I did my Ph.D. at the École Centrale Paris, MAS laboratory, under the supervision of professor <a href="http://erick.perso.math.cnrs.fr/">Erick Herbin</a>. My thesis was primarly focused on the use of (very!) analytical framework named 2-microlocal analysis to study and characterise sample path properties of stochastic processes. As the latter was obviously not cumbersome enough, I happened to mix with a bit of multifractal analysis to study nice classes of processes such <em>linear fractional stable motion</em>. For <em>epsilon</em> lovers and fans of fractional operators, you may find the full manuscript <a href="https://tel.archives-ouvertes.fr/tel-00958290/">here</a>.
           </p>
+          <p align="justify">
+          A full boring C.V. is also available: fr / en.
+          </p>
+
+          <h3 id="research">What I enjoy working on?</h3>
+          <p align="justify">
+          Probability theory • fractal geometry • local regularity • 2-microlocal analysis • multifractal analysis • (multi)fractional processes • continuous random trees • superprocesses
+          </p>
+
+          <h3 id="articles">What I wrote?</h3>
+
+          <ol>
+            <li>Paul Balan&ccedil;a and Leonid Mytnik. Uniform multifractal structure of stable trees and stable super-Brownian motion. <em>In preparation</em>, <strong>2015</strong>.
+            </li>
+            <li>Paul Balan&ccedil;a. Some sample path properties of multifractional Brownian motion. <em>Accepted in Stochastic Process. Appl.</em>, 1-28, <strong>2015</strong>. [&nbsp;<a href="http://dx.doi.org/10.1016/j.spa.2015.05.008" target="_blank">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1408.0317" target="_blank">arXiv</a>&nbsp;]
+            </li>
+            <li>Paul Balan&ccedil;a. Fine regularity of L&eacute;vy processes and linear (multi)fractional stable motion. <em>Electron. J. Probab.</em>, 19:no. 101, 37, <strong>2014</strong>. [&nbsp;<a href="http://dx.doi.org/10.1214/EJP.v19-3393" target="_blank">DOI</a>&nbsp;|<a href="http://arxiv.org/abs/1302.3140" target="_blank">arXiv</a>&nbsp;]
+            </li>
+            <li>Paul Balan&ccedil;a. An increment type set-indexed Markov property. <em>J. Theoret. Probab.</em>, pages 1-40, <strong>2014</strong>. [&nbsp;<a href="http://dx.doi.org/10.1007/s10959-014-0555-y" target="_blank">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1207.6568" target="_blank">arXiv</a>&nbsp;]
+            </li>
+            <li>Paul Balan&ccedil;a and Erick Herbin. A set-indexed Ornstein-Uhlenbeck process. <em>Electron. Commun. Probab.</em>, 17(39):1-14, <strong>2012</strong>. [&nbsp;<a href="http://dx.doi.org/10.1214/ECP.v17-1903" target="_blank">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1203.5524" target="_blank">arXiv</a>&nbsp;]
+            </li>
+            <li>Paul Balan&ccedil;a and Erick Herbin. 2-microlocal analysis of martingales and stochastic integrals. <em>Stochastic Process. Appl.</em>, 122(6):2346-2382, <strong>2012</strong>. [&nbsp;<a href="http://dx.doi.org/10.1016/j.spa.2012.03.011" target="_blank">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1107.6016" target="_blank">arXiv</a>&nbsp;]
+            </li>
+          </ol>
+
+          <h3>Where I have been?</h3>
+          <ul>
+            <li><em>Technion</em> - Probability seminar (May 2015)</li>
+            <li><em>Weizmann Institute</em> - Students Probability Day V (May 2015)</li>
+            <li><em>Orléans</em> - GDR d’analyse multifractale (Sept. 2014)</li>
+            <li><em>Saint Flour</em> - Probability summer school (July 2014)</li>
+            <li><em>Banff</em> - Multifractal Analysis Workshop (Feb. 2014)</li>
+            <li><em>Paris Descartes</em> - Groupe de travail en Probabilités (Oct. 2013)</li>
+            <li><em>Wrocław</em> - 7th International Conference on Lévy Processes (July 2013)</li>
+            <li><em>Orléans</em> - Journées de Probabilités (Juin 2013)</li>
+            <li><em>Paris-Est Créteil</em> - Séminaire Cristolien d’Analyse Multifractale (Mai 2013)</li>
+            <li><em>Istanbul</em> - 8th World Congress in Probability and Statistics (July 2012)</li>
+          </ul>
+
+          <h3 id="teaching">What I have been teaching?</h3>
+          <ul>
+            <li>2010 - 2013: Teaching assistant at École Centrale Paris in Analysis, Probability and Statistics
+            </li>
+            <li>2013: Teaching assistant at ENSAE in functional analysis
+            </li>
+            <li>2014: Crash course at the Technion on continuous Lévy trees</li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+            <ul id="sidebar" class="nav nav-stacked fixed">
+              <li><a href="#who">Who I am?</a></li>
+              <li><a href="#research">What I enjoy working on?</a></li>
+              <li><a href="#articles">What I wrote?</a></li>
+              <li><a href="#conferences">Where I have been?</a></li>
+              <li><a href="#teaching">What I have been teaching?</a></li>
+              <!-- <li>
+                  <a href="#GroupC">Group C</a>
+                  <ul class="nav nav-stacked">
+                      <li><a href="#GroupCSub1">Sub-Group 1</a></li>
+                      <li><a href="#GroupCSub2">Sub-Group 2</a></li>
+                  </ul>
+              </li> -->
+            </ul>
+          </nav>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <h3>Who I am?</h3>
-      <p align="justify">
-      I am a post-doc working in collaboration with professor <a href="http://iew3.technion.ac.il/Home/Users/leonid.phtml">Leonid Mytnik</a> at the Israel Institute of Technology - Technion. My present work work mainly investigates the fractal geometry of continuous random trees and measure-valued processes such as stable super-Brownian motion. I am happily working on these subjects thanks to a joined fellowship of the Technion and the French Embassy in Israël.
-      </p>
-      <p align="justify">
-      From 2010 to 2013, I did my Ph.D. at the École Centrale Paris, MAS laboratory, under the supervision of professor <a href="http://erick.perso.math.cnrs.fr/">Erick Herbin</a>. My thesis was primarly focused on the use of (very!) analytical framework named 2-microlocal analysis to study and characterise sample path properties of stochastic processes. As the latter was obviously not cumbersome enough, I happened to mix with a bit of multifractal analysis to study nice classes of processes such <em>linear fractional stable motion</em>. For <em>epsilon</em> lovers and fans of fractional operators, you may find the full manuscript <a href="https://tel.archives-ouvertes.fr/tel-00958290/">here</a>.
-      </p>
-      <p align="justify">
-      A full boring C.V. is also available: fr / en.
-      </p>
-
-      <h3>What I enjoy working on?</h3>
-      <p align="justify">
-      Probability theory • fractal geometry • local regularity • 2-microlocal analysis • multifractal analysis • (multi)fractional processes • continuous random trees • superprocesses
-      </p>
-
-      <h3>What I wrote?</h3>
-
-      <ol>
-        <li>Paul Balan&ccedil;a and Leonid Mytnik. Uniform multifractal structure of stable trees and stable super-Brownian motion. <em>In preparation</em>, <strong>2015</strong>.
-        </li>
-        <li>Paul Balan&ccedil;a. Some sample path properties of multifractional Brownian motion. <em>Accepted in Stochastic Process. Appl.</em>, 1-28, <strong>2015</strong>. [&nbsp;<a href="http://dx.doi.org/10.1016/j.spa.2015.05.008">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1408.0317">arXiv</a>&nbsp;]
-        </li>
-        <li>Paul Balan&ccedil;a. Fine regularity of L&eacute;vy processes and linear (multi)fractional stable motion. <em>Electron. J. Probab.</em>, 19:no. 101, 37, <strong>2014</strong>. [&nbsp;<a href="http://dx.doi.org/10.1214/EJP.v19-3393">DOI</a>&nbsp;|<a href="http://arxiv.org/abs/1302.3140">arXiv</a>&nbsp;]
-        </li>
-        <li>Paul Balan&ccedil;a. An increment type set-indexed Markov property. <em>J. Theoret. Probab.</em>, pages 1-40, <strong>2014</strong>. [&nbsp;<a href="http://dx.doi.org/10.1007/s10959-014-0555-y">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1207.6568">arXiv</a>&nbsp;]
-        </li>
-        <li>Paul Balan&ccedil;a and Erick Herbin. A set-indexed Ornstein-Uhlenbeck process. <em>Electron. Commun. Probab.</em>, 17(39):1-14, <strong>2012</strong>. [&nbsp;<a href="http://dx.doi.org/10.1214/ECP.v17-1903">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1203.5524">arXiv</a>&nbsp;]
-        </li>
-        <li>Paul Balan&ccedil;a and Erick Herbin. 2-microlocal analysis of martingales and stochastic integrals. <em>Stochastic Process. Appl.</em>, 122(6):2346-2382, <strong>2012</strong>. [&nbsp;<a href="http://dx.doi.org/10.1016/j.spa.2012.03.011">DOI</a>&nbsp;| <a href="http://arxiv.org/abs/1107.6016">arXiv</a>&nbsp;]
-        </li>
-      </ol>
-
-      <h3>Where I have been?</h3>
-      <ul>
-        <li><em>Technion</em> - Probability seminar (May 2015)</li>
-        <li><em>Weizmann Institute</em> - Students Probability Day V (May 2015)</li>
-        <li><em>Orléans</em> - GDR d’analyse multifractale (Sept. 2014)</li>
-        <li><em>Saint Flour</em> - Probability summer school (July 2014)</li>
-        <li><em>Banff</em> - Multifractal Analysis Workshop (Feb. 2014)</li>
-        <li><em>Paris Descartes</em> - Groupe de travail en Probabilités (Oct. 2013)</li>
-        <li><em>Wrocław</em> - 7th International Conference on Lévy Processes (July 2013)</li>
-        <li><em>Orléans</em> - Journées de Probabilités (Juin 2013)</li>
-        <li><em>Paris-Est Créteil</em> - Séminaire Cristolien d’Analyse Multifractale (Mai 2013)</li>
-        <li><em>Istanbul</em> - 8th World Congress in Probability and Statistics (July 2012)</li>
-      </ul>
-
-
     </div>
 
 
