@@ -15,18 +15,15 @@
     <!-- Personal stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!--     <script type='text/javascript'>//<![CDATA[
-    $(window).load(function(){
-    $('body').scrollspy({
-    target: '#sidebar'
-    });
-    });//]]>
-    </script> -->
-    <!-- <script>
-    $('body').scrollspy({
-    target: '.bs-docs-sidebar',
-    offset: 40});
-    </script> -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-63406725-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,7 +32,7 @@
     <![endif]-->
   </head>
   <body>
-
+    <div id="anchor-top"></div>
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -49,7 +46,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#" name="home"><i class="fa fa-home fa-fw"></i>&nbsp; Home<span class="sr-only">(current)</span></a></li>
             <!-- <li><a href="#">Research</a></li> -->
             <!-- <li><a href="#">Teaching</a></li> -->
             <!-- <li class="dropdown">
@@ -141,7 +138,7 @@
             <li>R. Yalamanchili, D. Chittajallu, P. Balança, B. Tamarappoo, D. Berman, D. Dey and I. Kakadiaris. Automatic segmentation of the diaphragm in non-contrast CT images. <em>From Nano to Macro, 2010 IEEE International Symposium on Biomedical Imaging.</em> pp. 900-903, <strong>2010</strong>. [&nbsp;<a href="http://dx.doi.org/10.1109/ISBI.2010.5490132" target="_blank">DOI</a> &nbsp;]</li>
           </ol>
 
-          <h3>Where I have been?</h3>
+          <h3 id="conferences">Where I have been?</h3>
           <ul>
             <li><em>Technion</em> - Probability seminar (May 2015)</li>
             <li><em>Weizmann Institute</em> - Students Probability Day V (May 2015)</li>
@@ -166,11 +163,13 @@
         <div class="col-md-2">
           <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
             <ul id="sidebar" class="nav nav-stacked fixed">
-              <li><a href="#who">Who I am?</a></li>
-              <li><a href="#research">What I enjoy working on?</a></li>
-              <li><a href="#articles">What I wrote?</a></li>
-              <li><a href="#conferences">Where I have been?</a></li>
-              <li><a href="#teaching">What I have been teaching?</a></li>
+              <li><a data-scroll href="#anchor-top"><i class="fa fa-arrow-up"></i></a></li>
+              <li><a data-scroll href="#who">Who I am?</a></li>
+              <li><a data-scroll href="#research">What I enjoy working on?</a></li>
+              <li><a data-scroll href="#articles" >What I wrote?</a></li>
+              <li><a data-scroll href="#conferences">Where I have been?</a></li>
+              <li><a data-scroll href="#teaching">What I have been teaching?</a></li>
+              <li><a data-scroll href="#anchor-bottom"><i class="fa fa-arrow-down"></i></a></li>
               <!-- <li>
                 <a href="#GroupC">Group C</a>
                 <ul class="nav nav-stacked">
@@ -183,17 +182,16 @@
         </div>
       </div>
     </div>
+    <div id="anchor-bottom"></div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Additional js plugins -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/smooth-scroll.min.js"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-63406725-1', 'auto');
-    ga('send', 'pageview');
+      smoothScroll.init();
     </script>
   </body>
 </html>
